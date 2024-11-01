@@ -1,38 +1,109 @@
+/* App.css */
+/* color palette https://colorhunt.co/palette/dff2ebb9e5e87ab2d34a628a */
+/* design https://www.creativebloq.com/advice/choose-the-perfect-colour-palette-for-your-website */
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f9f9f9;
+  scroll-snap-type: y mandatory; /* Vertical snapping */
+  overflow-y: scroll;
+  margin: 0;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Add padding to the top of the page content to avoid it being hidden behind the fixed nav */
+.content {
+  padding-top: 60px; /* Adjust based on nav height */
+}
+
+
+/* Navigation styling */
+.nav {
+  display: flex;
+  gap: 1rem;
+  background-color: #7AB2D3;
+  padding: 1rem;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav a {
+  color: #4A628A;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav a:hover {
+  color: #DFF2EB;
+}
+
+/* Page sections styling */
+section {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+
+h2 {
+  color: #4A628A;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 4%;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  section {
+    width: 95%;
+    padding: 15px;
   }
 }

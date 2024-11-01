@@ -1,0 +1,26 @@
+/* Page sections styling */
+section {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+
+h3 {
+    color: #333;
+    text-align: left;
+  }
+  
+
+p {
+    text-align: left;
+    color: #333;
+}
